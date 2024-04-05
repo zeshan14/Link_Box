@@ -89,11 +89,11 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .good {
+        .Good {
             color: #4CAF50; /* Green color for good prediction */
         }
 
-        .bad {
+        .Bad {
             color: #F44336; /* Red color for bad prediction */
         }
     </style>
@@ -162,7 +162,7 @@
 
                 // Map the label to "GOOD" or "BAD"
                 var result;
-                if (label === "like" || label === "good") {
+                if (label === "Good") {
                     result = "Good";
                 } else {
                     result = "Bad";
@@ -172,9 +172,9 @@
                 resultElement.textContent = result + ': ' + confidence + '%';
                 resultElement.classList.add('prediction-item');
                 if (result === "Good") {
-                    resultElement.classList.add('good');
+                    resultElement.classList.add('Good');
                 } else {
-                    resultElement.classList.add('bad');
+                    resultElement.classList.add('Bad');
                 }
                 resultsDiv.appendChild(resultElement);
             });
